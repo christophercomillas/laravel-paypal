@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('checkout','PaymentController@index');
+Route::get('paywithpaypal','PaymentController@index');
+
+Route::post('paywithpaypal','PaymentController@payWithpaypal');
+
+Route::get('status','PaymentController@getPaymentStatus');
